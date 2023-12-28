@@ -61,4 +61,12 @@ function scrollToTop() {
 
 //RESPONSIVENESS
 
-let baar = document.getElementById("baar");
+function openNav() {
+  document.getElementById("mySidenav").style.width = "210px";
+  document.getElementById("main").style.marginLeft = "210px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}

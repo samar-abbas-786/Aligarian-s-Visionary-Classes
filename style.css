@@ -21,6 +21,12 @@
     background-image: url(Images/logo.jpg);
     background-size: cover;
 } 
+.sidenav{
+  display: none;
+}
+#main{
+  display: none;
+}
 
 
 nav{
@@ -33,8 +39,8 @@ nav{
     display: flex;
     justify-content: space-between;
     position: fixed;
-    z-index: 1000;
-    /* top: 0; */
+    z-index: 1;
+    top: 0;
 border-bottom: 1px solid black;
 }
 .right{
@@ -331,13 +337,14 @@ span{
     justify-content: space-between;
     margin-bottom: 2rem;
 }
-.features-container-text{
-  /* display: flex;
+/*
+ .features-container-text{
+   display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
-    justify-content: center; */
-}
+    justify-content: center; 
+} */
 
 .feature-text{
   color: #5228f5;
@@ -825,32 +832,88 @@ font-family: "Inter";
         margin-left: 45%;
         font-size: 26px;
         font-weight: bold;
-        margin-top: 40px;
         font-family: sans-serif;
-        border-bottom: 5px solid orange;
   }
+  #coursesH a{
+    border-bottom: 5px solid orange;
+
+  }
+  /*Side nav testting*/
+  .sidenav {
+    display: block;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  color: rgb(223, 117, 78);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  display: block;
+  transition: margin-left .5s;
+  padding: 16px;
+}
 
 /* responsive design */
 
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 512px) {
 nav{
   position: absolute;
     min-height: 40px;
-    width: 100%;
+    width: 100vw;
     background-color: white;
     color: rgb(0, 0, 0);
     /* box-shadow: 2px 2px 2px 2px rgb(255, 255, 255); */
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     position: fixed;
-    z-index: 1000;
+    z-index: 1;
     /* top: 0; */
 border-bottom: 1px solid black;
 
 }
-.left{
-  width: 10%;
+
+
+.box1{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-image: url(Images/logo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.left ul li  img{
+  height: 30px;
+  width: 30px;
+  margin-left: 100%;
+  
 }
 nav .left ul li a{
   display: none;
@@ -865,7 +928,11 @@ nav .left ul li a{
   font-weight: bold;
   padding-left: 20px;
   font-size: 13px;
-  font-family: sans-serif;}
+  font-family: sans-serif;
+}
+.right h1{
+  font-size: 15px;
+}
   
 
 
@@ -881,6 +948,7 @@ nav .left ul li a{
   display: flex;
   flex-direction: column;
   /* background-clip: border-box; */
+  background-position: center;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -893,7 +961,7 @@ nav .left ul li a{
   
 }
 .back h1{
-  font-size: 20px;
+  font-size: 22px;
 
   /* width: 0ch; */
   /* position: absolute;
@@ -1076,12 +1144,18 @@ justify-content: space-evenly;
   font-size: 17px;
   align-items: center;
 }
- #coursesH{
-  font-size: 21px;
-  
-  
-  
- }
+#coursesH{
+  width: 100vw;
+  list-style: none;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: sans-serif;
+    
+}
+#coursesH a{
+  border-bottom: 5px solid orange;
+
+}
 .c1:hover{
   border: 2px solid black;
   background: linear-gradient(to bottom,#fff 50%, rgb(0, 0, 0) 50% );
@@ -1099,59 +1173,127 @@ justify-content: space-evenly;
   font-weight: bold;
   border-color: white;
 }
-}
- /* #responsive{
-  margin-top: 50px;
-  height: 500px;
-  width: 20%;
-  background-color: navy;
-  color: white;
-  border: 2px solid white;
+/*footer*/
+.home-footer {
+    
+  width: 100vw;
+  height: 400px;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  margin-left: 1150px
-}
-
-
-#responsive ul{
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-
-  justify-content: space-between;
   align-items: center;
+  background-color: black;
+  color: white;
+  margin-top: 2rem;
+  
+  padding-top: 1.3rem;
 }
-#responsive ul li{
-  list-style: none;
-  font-size: 16px;
-  font-family: sans-serif;
-  font-weight: 600;
+.home-footer h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
 }
-#responsive ul li a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 17px;
-  font-weight: bold;
-  /* border-bottom: 5px solid rgb(72, 4, 121); */
-/* 
-} 
 
-#responsive ul li a::after{
-     content: '' ;
-     display: block;
-     width: 0%;
-     height: 5px;
-     background-color:coral;
-     transition: width 0.3;
-     
-}
-#responsive ul li a:hover::after{
-  width: 100%;
-transition: width 0.4s;
+.li{
+  height: 20px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   
 }
-#responsive ul li a:hover{
-color: coral;
 
-}  */
+.li ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 20px;
+  width: 100vw;
+  margin-top: 5.5rem;
+}
+.li ul li{
+  list-style: none;
+  font-size: 10px;
+  font-weight: bold;
+  padding-top: 10px;
+  font-family: sans-serif;
+}
+.li ul li a{
+  text-decoration: none;
+  color: white;
+ 
+}
+.last_bottom{
+  height: 100px;
+  width:100vw;
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+  
+}
+.loc{
+  height: 90px;
+  width: 40vw;
+  background-color: black;
+  font-size: 18px;
+  text-align: center;
+  font-size: 12px;
+  padding-left: 1rem;
+}
+.loc img{
+  height: 35px;
+  width: 60px;
+}
+#links{
+  height: 100px;
+  width: 25vw;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  padding-right: 3rem;
+}
+.img1 img,
+.img2 img
+{
+  height: 30px;
+  width: 30px;
+}
+.img3 img{
+  height: 40px;
+  width: 40px;
+  margin-top: 3px;
+}
+.copyright{
+  height: 35px;
+  display: flex;
+  width: 100vw;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  border-top: 1px solid white;
+  font-size: 11px ;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+.btn1{
+  height: 26px ;
+  width: 110px;
+  border-radius: 12px;
+  
+  background-color: #0c1ad3;
+  color: rgb(232, 227, 227);
+  font-size:12px;
+  font-weight: bolder;
+  margin-right: 40px;
+  margin-bottom: 6rem;
+}
+/*  */
+sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+}
+ 
