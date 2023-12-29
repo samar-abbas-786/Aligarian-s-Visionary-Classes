@@ -94,7 +94,7 @@
   </style>
   <body>
     <form action="" name="submit-to-google-sheet">
-      <main>
+      <main id="thanku">
         <h1>Student Registration</h1>
         <label for="name">Name: </label>
         <input name="Name" required type="text" />
@@ -104,7 +104,7 @@
         <input name="Password" required type="password" />
         <label for="course">Course: </label>
         <input name="Course" required type="text" />
-        <button onsubmit="">Submit</button>
+        <button onsubmit="" onclick="Successfully()" id="clear">Submit</button>
       </main>
     </form>
     <script>
@@ -118,6 +118,10 @@
           .then((response) => console.log("Success!", response))
           .catch((error) => console.error("Error!", error.message));
       });
+      function Successfully() {
+        document.getElementById("thanku").innerHTML =
+          "<h1>THANK YOU FOR YOUR REGISRATION</h1>";
+      }
     </script>
   </body>
 </html>
