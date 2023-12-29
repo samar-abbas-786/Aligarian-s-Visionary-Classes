@@ -65,7 +65,7 @@
     }
   </style>
   <body>
-    <form action="" name="form data">
+    <form action="" name="submit-to-google-sheet">
       <main>
         <h1>Student Registration</h1>
         <label for="name">Name: </label>
@@ -76,8 +76,20 @@
         <input name="Password" required type="password" />
         <label for="course">Course: </label>
         <input name="Course" required type="text" />
-        <button>Submit</button>
+        <button onsubmit="">Submit</button>
       </main>
     </form>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbytKw_djBD6CDpbCPuwCtxqpY_rrM0k9hDd1zhRMHYp1PHVqr1bWl3OeR--FxS49b63/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>

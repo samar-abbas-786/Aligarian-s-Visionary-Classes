@@ -70,3 +70,9 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
 }
+
+//regsitration
+function openRegistration() {
+  var Url = "student_registration.html";
+  window.open(Url, "_blank");
+}
