@@ -1677,28 +1677,7 @@ margin-bottom: 5rem;
   Times, serif;}
  
   .batch{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    height: 40px;
-    width:auto;
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
-    background-color: black;
-    top: 0;
-    border-radius: 2px;
-    padding-bottom: 15px;
-    margin-top: 1190px;
-    font-weight: bold;
-    animation: circle;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-    
-   
+    display: none;
   }
 /*  */
 sidenav {padding-top: 15px;}
